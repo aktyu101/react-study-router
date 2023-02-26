@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./pages/Main";
+import Post from "./pages/Post";
+import PostSegment from "./pages/PostSegment";
+import User from "./pages/user";
+import UserChildren from "./pages/user children";
 
+const router = createBrowserRouter([
+  {
+    path: "/", //최상단 경로
+    element: <Main />, //페이지
+  },
+  {
+    path: "/post",
+    element: <Post />,
+  },
+  {
+    path: "/post/:id",
+    element: <PostSegment />,
+  },
+  {
+    path: "/user",
+    element: <User />,
+    children: [{ path: ":id", element: <UserChildren /> }],
+  },
+]);
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
