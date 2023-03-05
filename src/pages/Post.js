@@ -1,3 +1,8 @@
+import Title from "../components/Title";
 export default function Post() {
-  return <>post</>;
+  return (
+    <>
+      <Title text="post" />
+    </>
+  );
 }

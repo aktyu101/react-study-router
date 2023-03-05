@@ -1,0 +1,15 @@
+.tab-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.link-tab {
+  text-decoration: none;
+  color: #222;
+  border: solid 1px #ddd;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+}
+.link-tab:hover {
+  background-color: #ddd;
+}
