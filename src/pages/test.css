@@ -1,0 +1,12 @@
+.tab_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.tab_btn {
+  text-align: center;
+  border: solid 1px #dbdbdb;
+  text-decoration: none;
+  color: #222;
+  width: 100%;
+  line-height: 50px;
+}

@@ -5,7 +5,7 @@ import Main from "./pages/Main";
 import PostSegment from "./pages/PostSegment";
 import User from "./pages/user";
 import Test from "./pages/Test";
-import UserChildren from "./pages/user children";
+import UserChildren from "./pages/userChildren";
 import Navigation from "./components/Navigation";
 import "./App.css";
 //react router dom index 또는 app 최상위에 존재해야함
@@ -21,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/test",
         element: <Test />,
+        children: [{ path: ":id", element: <UserChildren /> }],
       },
       {
         path: "/post",

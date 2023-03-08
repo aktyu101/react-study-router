@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import UserChildren from "./user children";
+import UserChildren from "./userChildren";
 import Title from "../components/Title";
 import "./user.css";
 import classNames from "classnames";
